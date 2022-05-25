@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="https://img.freepik.com/fotos-gratis/medico-com-um-estetoscopio-nas-maos-e-fundo-do-hospital_1423-1.jpg?size=626&ext=jpg&ga=GA1.2.195312555.1652317452" alt="">
 
         <div class="container">
           <div class="carousel-caption">
