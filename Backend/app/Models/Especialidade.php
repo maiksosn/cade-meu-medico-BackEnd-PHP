@@ -11,4 +11,9 @@ class Especialidade extends Model
     protected $fillable = [
         'especialidades',
     ];
+
+    public function medicos()
+    {
+        return $this->belongsToMany(Medico::class, 'medicos_especialidades', 'especialidade_id', 'medico_id')->withTimestamps();
+    }
 }

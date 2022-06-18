@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Especialidade;
+use App\Models\Medico;
 use Illuminate\Http\Request;
 
 class EspecialidadeController extends Controller
@@ -39,7 +40,12 @@ class EspecialidadeController extends Controller
      */
     public function show($id)
     {
-        //
+        $especialidade = Especialidade::where('id', $id)->first();
+        //dd($especialidade);
+        //$especialidade = $especialidade->especialidade()->first;
+        // if ($especialidade) {
+        // }
+        return json_encode($especialidade);
     }
 
     /**
@@ -70,5 +76,11 @@ class EspecialidadeController extends Controller
         $especialidade = Especialidade::find($id);
         $especialidade->delete();
         return json_encode(['message' => 'Especialidade deletada com sucesso!']);
+    }
+
+    public function joinEspecialidade($id)
+    {
+        $medico = Medico::get($id);
+        $medico->especialidadeAsMedico()->attach($id);
     }
 }

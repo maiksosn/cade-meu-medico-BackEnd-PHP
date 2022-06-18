@@ -20,4 +20,9 @@ class Medico extends Model
         'websiteblog',
     ];
     public $timestamps = false;
+
+    public function especialidades()
+    {
+        return $this->belongsToMany(Especialidade::class, 'medico_especialidade', 'medico_id', 'especialidade_id')->withTimestamps();
+    }
 }

@@ -39,7 +39,13 @@ class MedicoController extends Controller
      */
     public function show($id)
     {
-        //
+        // Pesqueisa pelo id
+        $medico = Medico::where('id', $id)->get();
+        //dd($medico);
+        //$especialidade = $medico->especialidade()->first;
+        // if ($especialidade) {
+        // }
+        return json_encode($medico);
     }
 
     /**

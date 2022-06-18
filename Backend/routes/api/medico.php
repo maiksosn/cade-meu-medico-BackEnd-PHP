@@ -8,3 +8,4 @@ Route::get('', [MedicoController::class, 'index']);
 Route::post('', [MedicoController::class, 'store']);
 Route::delete('/{id}', [MedicoController::class, 'destroy']);
 Route::put('/{id}', [MedicoController::class, 'update']);
+Route::get('/{id}', [MedicoController::class, 'show']);

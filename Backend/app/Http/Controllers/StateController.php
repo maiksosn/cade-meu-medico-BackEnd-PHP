@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Especialidade;
 use App\Models\State;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
@@ -60,9 +61,8 @@ class StateController extends Controller
      */
     public function show($id)
     {
-        // Buscar o estado pelo id
+        // Pesqueisa pelo id
         $state = State::find($id);
-        // Retorna o estado como json
         return json_encode($state);
     }
 
