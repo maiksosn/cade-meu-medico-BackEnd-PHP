@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('medicos', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements('id');
+            $table->foreign('especialidade_id')->references('id')->on('especialidades');
             $table->string('CRM');
             $table->string('nome');
             $table->string('endereco');
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->boolean('atendeporconvenio')->default(true);
             $table->boolean('temclinica')->default(true);
             $table->string('websiteblog');
+
             $table->timestamps();
         });
     }
